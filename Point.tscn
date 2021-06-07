@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Point.cs" type="Script" id=1]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="ImageTexture" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.913725, 0.211765, 0.211765, 1 )
+metallic_specular = 0.0
+metallic_texture = SubResource( 2 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0313067, -0.0373551, 0.0403566 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )

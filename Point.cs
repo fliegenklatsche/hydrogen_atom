@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Camera : Godot.Camera
+public class Point : Spatial
 {
     // Declare member variables here. Examples:
     // private int a = 2;

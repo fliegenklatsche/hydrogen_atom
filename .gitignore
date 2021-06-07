@@ -1,0 +1,13 @@
+*.tres
+*onetoc2
+*.md5
+*.stex
+*.dll
+*.pdb
+*.xml
+*.cfg
+*.editor
+*.editor_player
+*.cache
+*.props
+*.targets
