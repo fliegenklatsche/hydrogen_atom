@@ -10,12 +10,16 @@ public class Camera : Godot.Camera
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    //  // Called every frame. 'delta' is the elapsed time since the previous frame.
+    int count = 0;
+    public override void _Process(float delta)
+    {
+        if(count % 1000 == 0)
+            GD.Print(this.Translation.ToString());
+        count++;
+
+    }
 }

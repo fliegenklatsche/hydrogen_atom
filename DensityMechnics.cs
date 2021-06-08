@@ -16,7 +16,7 @@ class DensityMechanics
 
     private float maxValue;
 
-    private const int DENSITY = 50;
+    private const int DENSITY = 20;
 
     public DensityMechanics(float[,,] waveFunction,
     float[] x,

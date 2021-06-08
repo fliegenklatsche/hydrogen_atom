@@ -38,7 +38,7 @@ class WaveFunction
                 {
                     var r = Sqrt(x * x + y * y + z * z);
                     var theta = Acos(z / r);
-                    float psi2 = Exp(-r) * Pow(1 - r, 2) * Pow(Cos(theta),2);
+                    float psi2 = Exp(-2*r/3) * Pow(r, 4) * Pow(3*Pow(Cos(theta),2)-1,2);
 
                     waveFunction[indexX, indexY, indexZ] = psi2;
                     indexZ++;

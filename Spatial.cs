@@ -36,11 +36,16 @@ public class Spatial : Godot.Spatial
         float[] Y;
         float[] Z;
 
-        float stepX = Linspace(out X, -100, 100, 100);
-        float stepY = Linspace(out Y, -100, 100, 100);
-        float stepZ = Linspace(out Z, -100, 100, 100);
+        int pointCount = 100;
+        int pointCountMax = 30;
+        int pointCountMin = -30;
 
-        WaveFunction wave = new WaveFunction(X,Y,Z);
+
+        float stepX = Linspace(out X, pointCountMin, pointCountMax, pointCount);
+        float stepY = Linspace(out Y, pointCountMin, pointCountMax, pointCount);
+        float stepZ = Linspace(out Z, pointCountMin, pointCountMax, pointCount);
+
+        WaveFunction wave = new WaveFunction(X, Y, Z);
         wave.X = X;
         wave.Y = Y;
         wave.Z = Z;
@@ -55,10 +60,15 @@ public class Spatial : Godot.Spatial
 
         foreach (var vec3 in vec3List)
         {
+
             Point point = (Point)pointInstance.Instance();
             point.Translation = vec3;
-            point.Scale = new Vector3(0.1f, 0.1f, 0.1f);
-            AddChild(point);
+            point.Scale = new Vector3(0.05f, 0.05f, 0.05f);
+
+            if (point.Translation.x < 0)
+            {
+                AddChild(point);
+            }
 
         }
 
