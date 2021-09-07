@@ -36,7 +36,7 @@ public class Spatial : Godot.Spatial
         float[] Y;
         float[] Z;
 
-        int pointCount = 100;
+        int pointCount = 50;
         int pointCountMax = 30;
         int pointCountMin = -30;
 
